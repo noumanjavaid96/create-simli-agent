@@ -35,22 +35,18 @@ const SimliAgent: React.FC<SimliAgentProps> = ({ onStart, onClose }) => {
     // 3- PASTE YOUR CODE OUTPUT FROM SIMLI BELOW 👇
     /**********************************/
 
-    const response = await fetch("https://api.simli.ai/startE2ESession", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        apiKey: SIMLI_API_KEY,
-        faceId: "",
-        voiceId: "",
-        firstMessage: "",
-        systemPrompt: "",
-      }),
-    });
+    const response = await fetch("https://api.simli.ai/session/5a87134f-29bb-46ba-a17d-4a3b2c7fa6bc/gAAAAABn2nu0_9pBDu0Ccq55r3BOXUWu-V5u66e7m79orAE4JKpq63AI-Hq_Sd7THYjUmjytTqjc2cUa2qKqtShmfhPnmD8y2n1hm4ofuwu-m1So1ZC1IyNJ0WFnCce5syO4xcWi59zFVd0vHeS3j1Yd34sM1pRCQ_poqBHYQPSRBBlrpCsO3EebRi6iGsMC1mdT-n762U9l-Tb8wdFljpUo7XcC3a5h-xB3121ifW9cf8h9oyryH8pbxgMJg2S0PZnokHljpnk8fFk60bN2s_zMXcyfHKLwAM8ZgdaW2Jc52tuixo5_O6EOAnvo7DkcZE3Nuq9dGen6AS711wIzA5NjZEGoe3CptqyT0hrMbDW2I9Fzd2UyRV5oiMfFF597runEqZXt8x_odMYxClPfuhkjoNIzqbF81A==", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+    })
 
     const data = await response.json();
     const roomUrl = data.roomUrl;
+        const data = await response.json();
+        const roomUrl = data.roomUrl;
 
     /**********************************/
     
